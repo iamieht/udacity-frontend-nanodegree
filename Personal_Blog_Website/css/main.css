@@ -1,0 +1,39 @@
+@import "header.css";
+@import "sidebar.css";
+@import "footer.css";
+
+.layout {
+    display: grid;
+    grid-template-columns: 1fr, 1fr;
+    grid-template-rows: repeat(auto);
+    grid-template-areas: 
+        "header"
+        "sidebar" 
+        "blog"
+        "footer";
+}
+
+.header {
+    grid-area: header;
+    border: 3px solid red;
+}
+
+.sidebar {
+    grid-area: sidebar;
+    border: 3px solid red;
+}
+
+.blog {
+    grid-area: blog;
+    border: 3px solid red;
+}
+
+.footer {
+    grid-area: footer;
+    border: 3px solid red;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+}
