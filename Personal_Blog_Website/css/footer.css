@@ -10,7 +10,6 @@
 
 .footer ul {
     margin: 0;
-    padding: 0;
     list-style: none;
     text-align: center;
     border: 3px solid blue;
@@ -18,10 +17,5 @@
 
 .footer ul li {
     display: inline-block;
-}
-
-.footer ul li a {
-    color: #515151;
-    padding: 5px;
-    font-size: 24px;
+    padding: 0.5rem;
 }
