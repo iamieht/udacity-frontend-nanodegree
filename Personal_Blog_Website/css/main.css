@@ -1,6 +1,7 @@
 @import "header.css";
 @import "sidebar.css";
 @import "footer.css";
+@import "blog.css";
 
 .layout {
     display: grid;
