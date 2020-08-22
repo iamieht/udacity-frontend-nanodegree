@@ -1,9 +1,19 @@
+.sidebar {
+    border-bottom: 2px solid #DBDBDB;
+    margin-top: 1rem;
+}
+
 .author-img {
-    border: 3px solid green;
+    border: 3px solid #DBDBDB;
     width: 150px;
     height: 150px;
     border-radius: 100%;
     margin: 0 auto 10px;
+}
+
+.author-img:hover {
+    border: 3px solid #60BFBF;
+    background-color: #F2F2F2;
 }
 
 .author-name {
