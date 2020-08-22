@@ -1,0 +1,61 @@
+.blog {
+    display: grid;
+    grid-template-columns: auto;
+    grid-gap: 2em;
+    padding: 16px;
+    grid-template-areas:
+        "one"
+        "two"
+        "three"
+        "four"
+        "five"
+        "six";
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    justify-content: space-between;
+    box-sizing: border-box;
+    border: 3px solid green;
+}
+
+#one {
+    grid-area: one;
+}
+
+#two {
+    grid-area: two;
+}
+
+#three {
+    grid-area: three;
+}
+
+#four {
+    grid-area: four;
+}
+
+#five {
+    grid-area: five;
+}
+
+#six {
+    grid-area: six;
+}
+
+/* Media Query min 1024px*/
+
+@media (min-width: 1024px) {
+    .blog {
+        display: grid;
+        grid-template-columns: auto;
+        grid-gap: 2em;
+        padding: 16px;
+        grid-template-areas:
+            "one two"
+            "three four"
+            "five six";
+    }
+}
