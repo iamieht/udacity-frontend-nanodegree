@@ -45,9 +45,9 @@
     grid-area: six;
 }
 
-/* Media Query min 1024px*/
+/* Media Query min 768px*/
 
-@media (min-width: 1024px) {
+@media (min-width: 768px) {
     .blog {
         display: grid;
         grid-template-columns: auto;
