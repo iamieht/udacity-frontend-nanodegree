@@ -21,6 +21,30 @@
     border: 3px solid green;
 }
 
+.card-image {
+    display: block;
+    box-sizing: inherit;
+    width: 100%;
+}
+
+.card-title {
+    display: block;
+    font-size: 1.5rem;
+    box-sizing: inherit;
+    text-decoration: none;
+    transition: 0.5s;
+    color: #333333;
+    padding: .5rem 1rem 0 1rem;
+    font-weight: bold;
+}
+
+.card-text {
+    display: block;
+    box-sizing: inherit;
+    padding: 0 1rem .5rem 1rem;
+}
+
+
 #one {
     grid-area: one;
 }
@@ -57,5 +81,19 @@
             "one two"
             "three four"
             "five six";
+    }
+}
+
+/* Media Query min 1024px*/
+
+@media (min-width: 1024px) {
+    .blog {
+        display: grid;
+        grid-template-columns: auto;
+        grid-gap: 2em;
+        padding: 16px;
+        grid-template-areas:
+            "one two three"
+            "four five six";
     }
 }
