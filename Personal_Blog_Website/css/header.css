@@ -26,8 +26,7 @@
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: flex-start;
-    align-items: center;
+    justify-content: center;
 }
 
 .nav-menu-ul {
@@ -35,6 +34,7 @@
     list-style: none;
     justify-content: flex-start;
     margin: 0;
+    padding-inline-start: 10px;
 }
 
 .nav-menu-li {
@@ -45,7 +45,7 @@
 }
 
 .nav-menu-li:hover {
-    background-color: #DBDBDB;
+    background-color: #60BFBF;
     border-top-left-radius: 0.5rem;
     border-top-right-radius: 0.5rem;
 }
@@ -65,7 +65,7 @@
 }
 
 .nav-menu-socialmedia ul li:hover {
-    background-color: #DBDBDB;
+    background-color: #60BFBF;
     border-top-left-radius: 0.5rem;
     border-top-right-radius: 0.5rem;
 
