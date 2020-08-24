@@ -1,6 +1,6 @@
 .footer {
     background-color: #F2F2F2;
-    border-top: 2px solid #333333;
+    border-top: thick ridge #DBDBDB;;
 }
 
 .footer-title {
@@ -21,4 +21,5 @@
 .footer ul li {
     display: inline-block;
     padding: 0.5rem;
+    font-size: 0.90rem;
 }
