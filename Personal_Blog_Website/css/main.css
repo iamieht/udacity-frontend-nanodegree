@@ -2,6 +2,7 @@
 @import "sidebar.css";
 @import "footer.css";
 @import "blog.css";
+@import "subscribe.css";
 
 .layout {
     display: grid;
@@ -11,6 +12,7 @@
         "header"
         "sidebar" 
         "blog"
+        "subscribe"
         "footer";
 }
 
@@ -25,6 +27,10 @@
 .blog {
     grid-area: blog;
 
+}
+
+.subscribe {
+    grid-area: subscribe;
 }
 
 .footer {
