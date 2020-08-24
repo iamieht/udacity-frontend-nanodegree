@@ -3,6 +3,7 @@
 @import "footer.css";
 @import "blog.css";
 @import "subscribe.css";
+@import "blog-post.css";
 
 .layout {
     display: grid;
