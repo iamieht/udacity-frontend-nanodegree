@@ -45,6 +45,11 @@
 
 }
 
+.back a {
+    text-decoration: none;
+    color: #333333;
+}
+
 
 @media (min-width: 768px) {
     .post-container {
