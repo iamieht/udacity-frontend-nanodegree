@@ -50,6 +50,29 @@
     color: darkgray;
 }
 
+.author-avatar {
+    display: inline-block;
+    border: 1px solid #F2F2F2;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    max-width: 50%;
+    padding: 0.25rem 1em 0.25rem 1em;
+    border-radius: 10px;
+    margin-left: 25%;
+    font-size: 16px;
+    background-color: #F2F2F2;
+}
+
+.author-avatar em {
+    color: #60BFBF;
+    font-weight: bold;
+}
+
+.author-avatar a {
+    text-decoration: none;
+    color: #60BFBF;
+}
+
 .back {
     width: auto;
     margin: 2rem;
