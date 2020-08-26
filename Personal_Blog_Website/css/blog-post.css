@@ -21,6 +21,17 @@
     width: 100%;
 }
 
+.post-container figcaption {
+    text-align: center;
+    font-size: .9rem;
+    margin-bottom: .5rem;
+}
+
+.post-container figcaption a {
+    text-decoration: none;
+    color: #60B6BF;
+}
+
 .post-container h1 {
     text-align: center;
     font-size: 2rem;
