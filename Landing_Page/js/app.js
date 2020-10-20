@@ -20,20 +20,47 @@
 
 
 /**
- * End Global Variables
- * Start Helper Functions
+ * Helper Functions
  * 
 */
+function addNavigationItem(section) {
+    // add classes, ids to each section
+    const listItem = document.createElement('li');
+    listItem.classList.add('menu__link');
+    listItem.textContent = section.dataset.nav;
+    listItem.setAttribute('data-id', section.id);
 
+    return listItem;
+}
 
+function buildNavigationMenu(sections, navigationMenu) {
+    // build the navigation menu
+    sections.forEach(function(section) {
+        const styledSection = addNavigationItem(section);
+        navigationMenu.appendChild(styledSection);
+    })
+    
+}
+
+/* Add Event Listeners
+*
+*
+*/
+function setEvents(element, eventType) {
+    //addEventListeners
+}
 
 /**
- * End Helper Functions
- * Begin Main Functions
+ * Main Function
  * 
 */
 
-// build the nav
+function init() {
+    // start everything
+    const sections = document.querySelectorAll('section');
+    const navigationMenu = document.querySelector('#navbar__list')
+    buildNavigationMenu(sections, navigationMenu);
+}
 
 
 // Add class 'active' to section when near top of viewport
@@ -43,14 +70,17 @@
 
 
 /**
- * End Main Functions
  * Begin Events
  * 
 */
 
-// Build menu 
+// Build menu
+
 
 // Scroll to section on link click
 
 // Set sections as active
+
+// Start the app
+init()
 
