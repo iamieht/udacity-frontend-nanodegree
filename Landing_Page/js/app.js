@@ -14,17 +14,13 @@
 */
 
 /**
- * Define Global Variables
- * 
-*/
-
-
-/**
  * Helper Functions
  * 
 */
 function addNavigationItem(section) {
-    // add classes, ids to each section
+    /* create li element inside the empty ul
+    * add classes, text and ids to each section
+    */
     const listItem = document.createElement('li');
     listItem.classList.add('menu__link');
     listItem.textContent = section.dataset.nav;
@@ -42,13 +38,11 @@ function buildNavigationMenu(sections, navigationMenu) {
     
 }
 
-/* Add Event Listeners
-*
-*
-*/
-function setEvents(element, eventType) {
-    //addEventListeners
+function navClick(event) {
+    const sectionClicked = document.querySelector(`#${event.target.dataset.id}`);
+    sectionClicked.scrollIntoView({behavior: 'smooth'});
 }
+
 
 /**
  * Main Function
@@ -59,7 +53,12 @@ function init() {
     // start everything
     const sections = document.querySelectorAll('section');
     const navigationMenu = document.querySelector('#navbar__list')
+
+    // build menu
     buildNavigationMenu(sections, navigationMenu);
+
+    // begin events
+    navigationMenu.addEventListener('click', navClick);
 }
 
 
@@ -69,12 +68,8 @@ function init() {
 // Scroll to anchor ID using scrollTO event
 
 
-/**
- * Begin Events
- * 
-*/
 
-// Build menu
+
 
 
 // Scroll to section on link click
