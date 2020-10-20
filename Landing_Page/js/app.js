@@ -43,6 +43,29 @@ function navClick(event) {
     sectionClicked.scrollIntoView({behavior: 'smooth'});
 }
 
+function sectionInView(section) {
+    // return true if section in viewport
+    const whereRu = section.getBoundClientRect();
+    return (whereRu.top >= 0 &&
+            whereRu.bottom <= (window.innerHeight || document.documentElement.clientHeight));
+};
+
+function setActive(section) {
+    // set active section
+}
+
+function removeActive(section) {
+    // remove active section
+}
+
+function highlight(sections) {
+    // setactive || remove active section
+    sections.forEach(function(section) {
+        if (sectionInView(section)) {
+            setActive(section);
+        }
+    })
+}
 
 /**
  * Main Function
@@ -59,6 +82,7 @@ function init() {
 
     // begin events
     navigationMenu.addEventListener('click', navClick);
+    document.addEventListener('scroll', highlight(sections));
 }
 
 
