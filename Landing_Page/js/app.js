@@ -45,7 +45,7 @@ function navClick(event) {
 
 function sectionInView(section) {
     // return true if section in viewport
-    const whereRu = section.getBoundClientRect();
+    const whereRu = section.getBoundingClientRect();
     return (whereRu.top >= 0 &&
             whereRu.bottom <= (window.innerHeight || document.documentElement.clientHeight));
 };
