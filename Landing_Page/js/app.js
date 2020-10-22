@@ -15,7 +15,6 @@
 
 /**
  * Helper Functions
- * 
 */
 function addNavigationItem(section) {
     /* create li element inside the empty ul
@@ -44,29 +43,33 @@ function navClick(event) {
 }
 
 function sectionInView(section) {
-    // return true if section in viewport
+    // check if the section is in viewport
     const whereRu = section.getBoundingClientRect();
-    return (whereRu.top >= 0 &&
-            whereRu.bottom <= (window.innerHeight || document.documentElement.clientHeight));
-};
+    return (
+        whereRu.top <= 100 &&
+        whereRu.bottom >= 90)
+}
 
 function setActive(section) {
     // set active section
+    section.classList.add('your-active-class');
 }
 
 function removeActive(section) {
     // remove active section
+    section.classList.remove('your-active-class');
 }
 
 function highlight(sections) {
-    // setactive || remove active section
+    // active or inactive section
     sections.forEach(function(section) {
         if (sectionInView(section)) {
             setActive(section);
+        } else {
+            removeActive(section);
         }
     })
 }
-
 /**
  * Main Function
  * 
@@ -82,7 +85,7 @@ function init() {
 
     // begin events
     navigationMenu.addEventListener('click', navClick);
-    document.addEventListener('scroll', highlight(sections));
+    document.addEventListener('scroll', function() {highlight(sections)});
 }
 
 
@@ -90,7 +93,6 @@ function init() {
 
 
 // Scroll to anchor ID using scrollTO event
-
 
 
 
