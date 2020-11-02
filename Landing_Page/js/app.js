@@ -16,7 +16,8 @@
 /**
  * Helper Functions
 */
-function addNavigationItem(section) {
+
+const addNavigationItem = section => {
     /* create li element inside the empty ul
     * add classes, text and ids to each section
     */
@@ -26,23 +27,23 @@ function addNavigationItem(section) {
     listItem.setAttribute('data-id', section.id);
 
     return listItem;
+
 }
 
-function buildNavigationMenu(sections, navigationMenu) {
+const buildNavigationMenu = (sections, navigationMenu) => {
     // build the navigation menu
     sections.forEach(function(section) {
         const styledSection = addNavigationItem(section);
         navigationMenu.appendChild(styledSection);
     })
-    
 }
 
-function navClick(event) {
+const navClick = event => {
     const sectionClicked = document.querySelector(`#${event.target.dataset.id}`);
     sectionClicked.scrollIntoView({behavior: 'smooth'});
 }
 
-function sectionInView(section) {
+const sectionInView = section => {
     // check if the section is in viewport
     const whereRu = section.getBoundingClientRect();
     return (
@@ -50,17 +51,17 @@ function sectionInView(section) {
         whereRu.bottom >= 90)
 }
 
-function setActive(section) {
+const setActive = section => {
     // set active section
     section.classList.add('your-active-class');
 }
 
-function removeActive(section) {
+const removeActive = section => {
     // remove active section
     section.classList.remove('your-active-class');
 }
 
-function highlight(sections) {
+const highlight = sections => {
     // active or inactive section
     sections.forEach(function(section) {
         if (sectionInView(section)) {
@@ -70,12 +71,12 @@ function highlight(sections) {
         }
     })
 }
+
 /**
  * Main Function
  * 
 */
-
-function init() {
+const init = () => {
     // start everything
     const sections = document.querySelectorAll('section');
     const navigationMenu = document.querySelector('#navbar__list')
@@ -87,20 +88,6 @@ function init() {
     navigationMenu.addEventListener('click', navClick);
     document.addEventListener('scroll', function() {highlight(sections)});
 }
-
-
-// Add class 'active' to section when near top of viewport
-
-
-// Scroll to anchor ID using scrollTO event
-
-
-
-
-
-// Scroll to section on link click
-
-// Set sections as active
 
 // Start the app
 init()
