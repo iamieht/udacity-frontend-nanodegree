@@ -74,8 +74,8 @@ const highlight = sections => {
 
 /**
  * Main Function
- * 
 */
+
 const init = () => {
     // start everything
     const sections = document.querySelectorAll('section');
