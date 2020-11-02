@@ -112,6 +112,18 @@ section {
     color: #fff;
 }
 
+/* Arrow */
+.arrow {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    cursor: pointer;
+    display: block;
+}
+
+.hide {
+    display: none;
+}
 
 /* ---- Theme Rules ---- */
 /* Landing Container Styles */
