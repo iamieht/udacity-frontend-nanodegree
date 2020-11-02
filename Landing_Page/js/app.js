@@ -72,6 +72,15 @@ const highlight = sections => {
     })
 }
 
+const displayArrow = () => {
+    const arrow = document.getElementById('arrow-up');
+    if (window.scrollY > 300) {
+        arrow.classList.remove('hide');
+    } else {
+        arrow.classList.add('hide');
+    }
+}
+
 /**
  * Main Function
 */
@@ -86,8 +95,14 @@ const init = () => {
 
     // begin events
     navigationMenu.addEventListener('click', navClick);
-    document.addEventListener('scroll', function() {highlight(sections)});
+    document.addEventListener('scroll', () => {
+        highlight(sections); 
+        displayArrow();
+    });
+
 }
+
+
 
 // Start the app
 init()
