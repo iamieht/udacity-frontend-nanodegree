@@ -85,6 +85,7 @@ const scrollToTop = () => {
     window.scrollTo({top: 0, behavior: 'smooth'});
 }
 
+
 /**
  * Main Function
 */
@@ -94,7 +95,6 @@ const init = () => {
     const sections = document.querySelectorAll('section');
     const navigationMenu = document.querySelector('#navbar__list')
     const arrow = document.getElementById('arrow-up');
-
     // build menu
     buildNavigationMenu(sections, navigationMenu);
 
@@ -105,7 +105,6 @@ const init = () => {
         displayArrow(arrow);
     });
     arrow.addEventListener('click', () => scrollToTop());
-
 }
 
 // Start the app
