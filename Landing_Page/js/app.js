@@ -72,13 +72,17 @@ const highlight = sections => {
     })
 }
 
-const displayArrow = () => {
-    const arrow = document.getElementById('arrow-up');
+const displayArrow = arrow => {
+//    const arrow = document.getElementById('arrow-up');
     if (window.scrollY > 300) {
         arrow.classList.remove('hide');
     } else {
         arrow.classList.add('hide');
     }
+}
+
+const scrollToTop = () => {
+    window.scrollTo({top: 0, behavior: 'smooth'});
 }
 
 /**
@@ -89,6 +93,7 @@ const init = () => {
     // start everything
     const sections = document.querySelectorAll('section');
     const navigationMenu = document.querySelector('#navbar__list')
+    const arrow = document.getElementById('arrow-up');
 
     // build menu
     buildNavigationMenu(sections, navigationMenu);
@@ -97,12 +102,11 @@ const init = () => {
     navigationMenu.addEventListener('click', navClick);
     document.addEventListener('scroll', () => {
         highlight(sections); 
-        displayArrow();
+        displayArrow(arrow);
     });
+    arrow.addEventListener('click', () => scrollToTop());
 
 }
-
-
 
 // Start the app
 init()
